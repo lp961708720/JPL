@@ -4,9 +4,11 @@
 
 ---
 
-## 零、首套固定资产定妆图生图公式（给没有参考图的小白）
+## 零、资产定妆图与空景图生图公式（首套创建 & 按剧情按需补画通用）
 
-如果你手头还没有角色图或房间图，请先用这一组模板在 Gemini 生出**第一套固定资产图**。
+无论是零基础创建第一套主角图，还是**先定好新一期剧情后、按需补画这一期新增的场景空景图或宠物图**，都使用这一组模板在 Gemini 生图。
+
+> **画风统一铁律**：只要 `01_资产库/01_角色参考图/` 里已经有了主角图（例如 `01_资产库/01_角色参考图/主角_女孩_定妆图.jpg`），之后每次按剧情补画新场景或新宠物时，**都把主角图一并上传到 Gemini 当作画风参考**，这样所有分镜里的角色、宠物和房间画风会 100% 统一。
 
 ### 1. 主角定妆图模板（存为 `01_资产库/01_角色参考图/主角.png`）
 - **核心要求**：单人、正面或微侧面半身/全身、光线柔和均匀、背景简单不抢戏、服装轮廓和发色一目了然，方便后续每镜垫图复用。
@@ -39,11 +41,14 @@
 2. **参考图强绑定指令（紧跟开头，极其关键！）**：
    - **有角色 + 场景图时**：
      `Keep the exact same character design, hairstyle, hair color, and outfit from the character reference image. Keep the exact same room layout, furniture, window position, and interior details from the scene reference image.`
+   - **有角色 + 场景图（按题材换装模式，当 `资产档案.md` 开启按题材换装时优先使用）**：
+     `Keep the exact same face, facial features, hairstyle, and hair color from the character reference image, but dress the character in [本期专属温暖复古日系居家穿搭，例如 a soft oatmeal knit cardigan over a cream cotton blouse and warm brown linen trousers, no apron, wearing cozy indoor socks]. Keep the exact same room layout, furniture, window position, and interior details from the scene reference image.`
    - **只有景物特写（无人或仅局部手部）时**：
      `Keep the exact same kitchen countertop, utensils, lighting, and watercolor color palette from the scene reference image.`
    - **连续镜头「前镜垫后镜」（防锅具/食物/道具变样，强烈推荐！）**：
      当上一个镜头刚画出了某口锅、某盘切好的菜或某个杯子，下一镜继续拍它时，务必把上一镜生成的 `素材_图片/SXX.png` 一并传进 Gemini，并加上：
      `Continue directly from the previous shot reference image. Keep the exact same pot, bowl, utensils, food appearance, countertop texture, and warm lighting from the previous shot.`
+     *(若连续镜头中也包含主角，请一并加上 `and the exact same outfit from the previous shot`，确保同一期内穿搭始终不跳戏。)*
 
 3. **景别与机位词**：
    - 远景定环境：`Wide establishing shot`, `Exterior view looking through the warm window`
